@@ -32,7 +32,7 @@ set -e
 [[ -z "$DEBUG" ]] || set -x
 
 CEPH_DIR=${CEPH_DIR:-"/srv/ceph"}
-S3GW_CONTAINER=${S3GW_CONTAINER:-"quay.io/s3gw/s3gw:latest"}
+S3GW_CONTAINER=${S3GW_CONTAINER:-"quay.io/jecluis/s3gw:latest"}
 
 OUTPUT_DIR=${OUTPUT_DIR:-"$(pwd)/s3tests.results"}
 OUTPUT_FILE=${OUTPUT_FILE:-"${OUTPUT_DIR}/report.json"}

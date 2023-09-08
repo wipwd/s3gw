@@ -55,7 +55,7 @@ start_s3gw() {
                   --rm -d \
                   -v "${VOL}:/data" \
                   -p 7480:7480 \
-                  "quay.io/s3gw/s3gw:${version}")
+                  "quay.io/jecluis/s3gw:${version}")
   else
     echo "Running s3gw from ${CEPH_DIR}/build/bin"
     # as this is the version we're trying to test
