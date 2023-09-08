@@ -8,7 +8,7 @@ on:
 jobs:
   # Build the build-environment container, using it's workflow
   build-s3gw:
-    runs-on: self-hosted
+    runs-on: ubuntu-22.04
     steps:
 
       - name: Checkout
@@ -62,8 +62,8 @@ jobs:
             NPROC=16
             QUAY_EXPIRATION=Never
           tags: |
-            quay.io/s3gw/s3gw:latest
-            quay.io/s3gw/s3gw:${{ github.ref_name }}
+            quay.io/jecluis/s3gw:latest
+            quay.io/jecluis/s3gw:${{ github.ref_name }}
           file: Dockerfile
           context: .
 
@@ -172,8 +172,8 @@ jobs:
         with:
           push: true
           tags: |
-            quay.io/s3gw/s3gw-ui:${{ github.ref_name }}
-            quay.io/s3gw/s3gw-ui:latest
+            quay.io/jecluis/s3gw-ui:${{ github.ref_name }}
+            quay.io/jecluis/s3gw-ui:latest
           file: ui/src/frontend/Dockerfile
           context: ui/src/frontend
 
@@ -220,8 +220,8 @@ jobs:
         with:
           push: true
           tags: |
-            quay.io/s3gw/s3gw-cosi-sidecar:${{ github.ref_name }}
-            quay.io/s3gw/s3gw-cosi-sidecar:latest
+            quay.io/jecluis/s3gw-cosi-sidecar:${{ github.ref_name }}
+            quay.io/jecluis/s3gw-cosi-sidecar:latest
           file: cosi-sidecar/Dockerfile
           context: cosi-sidecar
 
@@ -232,8 +232,8 @@ jobs:
           build-args: |
             S3GW_VERSION=${{ github.ref_name }}
           tags: |
-            quay.io/s3gw/s3gw-cosi-driver:${{ github.ref_name }}
-            quay.io/s3gw/s3gw-cosi-driver:latest
+            quay.io/jecluis/s3gw-cosi-driver:${{ github.ref_name }}
+            quay.io/jecluis/s3gw-cosi-driver:latest
           file: cosi-driver/Dockerfile
           context: cosi-driver
 
