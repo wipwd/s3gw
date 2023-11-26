@@ -13,23 +13,11 @@ should feel encouraged to file an issue in our
 
 ## Features
 
-- UI:
-  - Display more information on objects
-  - Table columns have a show/hide button
-  - Add search field to data tables
-  - Add progress indicator for the loading process of the Angular app
-- Charts:
-  - Support certificate manager for handling certificates on endpoints
-  - Support cluster internal access with TLS enabled
-- SFS/Backend
-  - Add status page
-  - Add metrics page exposing s3gw internal data to monitoring (e.g. Prometheus)
+- Things
 
 ## Fixes
 
-- UI:
-  - A page reload now does not disable the admin switch
-  - Persist data tables pagination settings
+- Bugs
 
 ## Breaking Changes
 
